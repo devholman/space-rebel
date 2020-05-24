@@ -1,0 +1,15 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  color: #555;
+  font-family: sans-serif;
+  font-size: 18px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
