@@ -25,8 +25,8 @@ const Form = () => {
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
   const setStatus = (status) => {
-    console.log(state);
     dispatch({ type: 'updateStatus', status });
+    console.log(status);
   };
 
   const updatedFieldValue = (field) => (event) => {
@@ -36,10 +36,19 @@ const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setStatus('PENDING');
-
-    console.log(state);
-
-    setTimeout(() => setStatus('SUCCESS'), 1000);
+    fetch('/api/contact/', {
+      method: 'POST',
+      body: JSON.stringify(state),
+    })
+      .then((response) => response.json())
+      .then((response) => {
+        console.log(response);
+        setStatus('SUCCESS');
+      })
+      .catch((error) => {
+        console.error(error);
+        setStatus('ERROR');
+      });
   };
 
   if (state.status === 'SUCCESS') {
