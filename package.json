@@ -5,10 +5,18 @@
   "license": "MIT",
   "dependencies": {
     "gatsby": "^2.21.21",
+    "gatsby-plugin-postcss": "^2.3.2",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-particles-js": "^3.1.0",
+    "semantic-ui-react": "^0.88.2"
   },
   "scripts": {
     "develop": "gatsby develop"
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "tailwindcss": "^1.4.6"
   }
 }

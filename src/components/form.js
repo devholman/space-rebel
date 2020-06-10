@@ -15,7 +15,6 @@ const reducer = (state, action) => {
     case 'updateStatus':
       return { ...state, status: action.status };
     case 'reset':
-
     default:
       return INITIAL_STATE;
   }
