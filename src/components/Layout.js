@@ -7,7 +7,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import { useStaticQuery, graphql } from 'gatsby';
 import Particles from 'react-particles-js';
 import Nav from '../components/Nav';

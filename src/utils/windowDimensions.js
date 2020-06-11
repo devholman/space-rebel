@@ -1,11 +1,16 @@
 import { useState, useEffect } from 'react';
 
+//TODO:: Add logs and test around this functionality to confirm height is received
 function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
+  if (typeof window !== `undefined`) {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height,
+    };
+  } else {
+    return { height: 800, width: 300 };
+  }
 }
 
 export default function useWindowDimensions() {

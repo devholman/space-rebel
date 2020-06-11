@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@loadable/component": "^5.12.0",
     "gatsby": "^2.21.21",
     "gatsby-plugin-postcss": "^2.3.2",
     "gatsby-plugin-web-font-loader": "^1.0.4",
