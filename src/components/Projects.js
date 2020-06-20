@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'gatsby';
+
 import stock1 from '../assets/co-working.jpeg';
 import stock2 from '../assets/laptop.jpeg';
 import stock3 from '../assets/notebook.jpeg';
@@ -12,13 +14,13 @@ const Projects = () => {
       <section>
         <div className="flex w-full h-auto justify-auto">
           <div className="w-1/3 relative">
-            <a>
+            <Link to="/">
               <img
                 src={stock1}
                 alt="stock1"
                 className="w-full h-full lg:h-68 object-cover"
               ></img>
-            </a>
+            </Link>
             <div
               className="absolute w-full h-full top-0 flex justify-center items-center"
               style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}
@@ -28,67 +30,42 @@ const Projects = () => {
               </p>
             </div>
           </div>
-
           <div className="w-1/3 relative">
-            <a>
+            <Link to="/">
               <img
                 src={stock2}
-                alt="stock1"
+                alt="stock2"
                 className="w-full lg:h-68 object-cover"
               ></img>
-            </a>
+            </Link>
             <div
               className="absolute w-full h-full top-0 flex justify-center items-center"
               style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}
             >
               <p className="absolute w-full text-white text-center top-35 font-normal text-body">
-                Godaddy United
+                other Project
               </p>
             </div>
           </div>
           <div className="w-1/3 relative">
-            <a>
+            <Link to="/">
               <img
                 src={stock3}
-                alt="stock1"
-                className="w-full lg:h-68 object-cover"
+                alt="stock3"
+                className="w-full lg:h-68 h-full"
               ></img>
-              <div
-                className="absolute w-full h-full inset-0 top-0 flex justify-center items-center"
-                style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}
-              >
-                <p className="absolute w-full text-white text-center top-35 font-normal text-body">
-                  Jabra Headset
-                </p>
-              </div>
-            </a>
+            </Link>
+            <div
+              className="absolute w-full h-full top-0 flex justify-center items-center"
+              style={{ backgroundColor: 'rgba(0,0,0,0.6)' }}
+            >
+              <p className="absolute w-full text-white text-center top-35 font-normal text-body">
+                united{' '}
+              </p>
+            </div>
           </div>
         </div>
       </section>
-      {/* <div className="h-32 grid grid-cols-3 grid-flow-col mb-4">
-        <div
-          className="row-start-1 row-end-2 bg-cover bg-no-repeat flex justify-center items-center"
-          style={{
-            backgroundImage: `url(${stock1})`,
-          }}
-        >
-          <p>hello</p>
-        </div>
-        <div
-          className="bg-cover row-start-1 row-end-2 bg-no-repeat flex justify-center items-center"
-          style={{ backgroundImage: `url(${stock2})` }}
-        >
-          yolo
-        </div>
-        <div
-          className="bg-cover row-start-1 row-end-2 bg-no-repeat flex justify-center items-center"
-          style={{
-            backgroundImage: `url(${stock3})`,
-          }}
-        >
-          molo
-        </div>
-      </div> */}
     </>
   );
 };

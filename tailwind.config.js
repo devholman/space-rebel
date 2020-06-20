@@ -16,6 +16,7 @@ module.exports = {
         //30 = 120px(xl)
         '30': '7.5rem', //XL
         '72': '18rem',
+        '100': '25rem',
       },
 
       fontSize: {
@@ -44,6 +45,9 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    borderColor: ['responsive', 'hover', 'focus', 'active', 'focus-within'],
+    outline: ['focus', 'responsive', 'hover', 'focus-within'],
+  },
   plugins: [],
 };

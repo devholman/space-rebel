@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Dropdown from '../components/Dropdown';
 
 const Services = () => {
   const choices = [
     {
       title: 'web design',
-      description: 'lorem ipsum',
+      description: 'lorem design',
     },
     {
       title: 'SEO',
@@ -13,24 +13,61 @@ const Services = () => {
     },
     {
       title: 'email marketing',
-      description: 'lorem bacon',
+      description: 'lorem marketing',
+    },
+    {
+      title: 'Branding',
+      description: 'lorem branding',
     },
   ];
-  return (
-    <section className="bg-black w-screen">
-      <div className="mx-6 pb-16 pt-6">
-        <Dropdown choices={choices} />
 
-        <p className="text-center">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Curabitur
-          pretium tincidunt lacus. Nulla gravida orci a odio.
-        </p>
+  let [choice, setChoice] = useState([choices[0]]);
+  let initialBlue = false;
+  const filterChoice = (e) => {
+    e.preventDefault();
+    let selectedChoice = choices.filter(
+      (choice) => choice.title === e.target.value
+    );
+    setChoice(selectedChoice);
+  };
+  useEffect(() => {
+    if (choice[0].title == 'web design') {
+      initialBlue = true;
+      console.log(initialBlue);
+    }
+  }, []);
+
+  return (
+    <section id="services" className="bg-black w-screen">
+      <div className="pb-16 pt-6">
+        <div className="flex flex-row justify-left align-baseline">
+          <div className="text-2xl h-10 mx-6 text-white border-l-4 border-white pl-2 font-semibold leading-normal">
+            Services
+          </div>
+          <Dropdown choices={choices} filterChoice={filterChoice} />
+
+          <div className="md:flex md:flex-row md:justify-center hidden md:block">
+            {choices.map((choice, i) => {
+              return (
+                <>
+                  <button
+                    key={i + 1}
+                    value={`${choice.title}`}
+                    className={`md:text-white md:block md:mx-12 md:border-b-2
+                    md:border-gray-400 md:focus:outline-none
+                    md:focus-within:border-sr-blue-1 hidden ${
+                      initialBlue ? ' md:border-sr-blue-1' : ''
+                    }`}
+                    onClick={(e) => filterChoice(e, 'value')}
+                  >
+                    {choice.title}
+                  </button>
+                </>
+              );
+            })}
+          </div>
+        </div>
+        <p className="text-center mt-12">{choice[0].description} </p>
       </div>
     </section>
   );
