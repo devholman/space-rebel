@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Earth = ({ height = '306', width = '153' }) => (
+const Earth = ({ height, width }) => (
   <svg
     width={width}
     height={height}
     viewBox="0 0 153 306"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className="h-20 lg:h-32"
   >
     <path
       d="M220.27 237.868C267.3 200.557 275.179 132.186 237.868 85.1555C200.557 38.1254 132.186 30.2462 85.1556 67.557C38.1254 104.868 30.2463 173.239 67.5571 220.27C104.868 267.3 173.24 275.179 220.27 237.868Z"

@@ -1,12 +1,13 @@
 import React from 'react';
 
-const Stars = ({ height = '208', width = '89' }) => (
+const Stars = ({ height, width, cn }) => (
   <svg
     width={width}
     height={height}
     viewBox="0 0 208 89"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    className={`h-6 mb-2 md:h-10 md:mb-1 ${cn}`}
   >
     <path
       fill-rule="evenodd"

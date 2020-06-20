@@ -4,12 +4,15 @@ import { Link } from 'gatsby';
 import stock1 from '../assets/co-working.jpeg';
 import stock2 from '../assets/laptop.jpeg';
 import stock3 from '../assets/notebook.jpeg';
+import SubTitle from './SubTitle';
 
 const Projects = () => {
   return (
     <>
-      <div className="text-2xl border-l-4 border-white-500 pl-2 font-semibold leading-normal m-6 mb-4">
-        Our Adventures
+      <div id="our work">
+        <SubTitle classes={'border-white-500 m-6 mb-4'}>
+          Our Adventures
+        </SubTitle>
       </div>
       <section>
         <div className="flex w-full h-auto justify-auto">

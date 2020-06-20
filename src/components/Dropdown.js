@@ -2,11 +2,11 @@ import React from 'react';
 
 const Dropdown = ({ choices, filterChoice }) => {
   return (
-    <div className="flex flex-row justify-between mb-16 md:hidden">
+    <div className="mb-16 lg:hidden mt-6 inline">
       <select
         name="services"
         className="bg-black text-center border-b-2 border-white"
-        onBlur={(e) => filterChoice(e)}
+        onChange={(e) => filterChoice(e)}
       >
         {choices.map((choice, i) => {
           return (
