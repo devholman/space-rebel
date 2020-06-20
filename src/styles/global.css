@@ -1,0 +1,87 @@
+@import 'tailwindcss/base';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+
+@font-face {
+  font-family: 'Earth Orbiter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/earthorbiter.ttf') format('truetype'); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: 'Racing Sans One';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/RacingSansOne-Regular.ttf') format('truetype'); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: medium;
+  font-weight: 500;
+  src: url('../assets/fonts/Poppins-Medium.ttf') format('truetype'); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: black;
+  font-weight: 900;
+  src: url('../assets/fonts/Poppins-Black.ttf') format('truetype'); /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: black;
+  font-weight: 400;
+  src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype'); /* IE9 Compat Modes */
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  color: #555;
+  font-family: sans-serif;
+  font-size: 18px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-family: 'Poppins';
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+main {
+  box-sizing: border-box;
+  position: relative;
+}
+#tsparticles {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+}
+.header-center {
+  top: 50%;
+  left: 50%;
+  margin-top: 145px;
+  margin-left: -338.5px;
+}
+@media screen and (max-width: 480px) {
+  .header-center {
+    margin-top: 215px;
+    margin-left: -195px;
+  }
+}
+.heading {
+  font-family: 'Racing Sans One', cursive;
+}
+.logo {
+  font-family: 'Earth Orbiter';
+}
+.primary-cta {
+  box-shadow: 4px 4px 4px #ff4500;
+  font-family: 'Poppins';
+}
