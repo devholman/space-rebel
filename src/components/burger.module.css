@@ -1,4 +1,4 @@
-.burger {
+/* .burger {
   position: absolute;
   top: 5%;
   left: 2rem;
@@ -21,8 +21,50 @@
   width: 2rem;
   height: 0.25rem;
   /* background: ${({ theme }) => theme.primaryLight}; */
-  border-radius: 10px;
+/* border-radius: 10px;
   transition: all 0.3s linear;
   position: relative;
   transform-origin: 1px;
+} */
+
+.burgerButtonContainer {
+  z-index: 1000;
+  background: black;
+  position: absolute;
+  width: 33px;
+  height: 25px;
+  right: 15px;
+  top: 30px;
+}
+.burgerBars {
+  background: white;
+  height: 15% !important;
+}
+.crossBtn {
+  background: black;
+  right: 15px !important;
+}
+.cross {
+  background-color: white;
+}
+.menu {
+  background: black;
+  padding: 2.5em 1.5em 0;
+}
+.itemList {
+  color: white;
+  margin-bottom: 10px;
+}
+.menu-item {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.bm-menu-wrap {
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  z-index: 1100;
+  width: 300px;
+  height: 100%;
+  transition: all 0.5s ease 0s;
 }

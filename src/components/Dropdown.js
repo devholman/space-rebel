@@ -6,7 +6,7 @@ const Dropdown = ({ choices, filterChoice }) => {
       <select
         name="services"
         className="bg-black text-center border-b-2 border-white"
-        onChange={(e) => filterChoice(e)}
+        onBlur={(e) => filterChoice(e)}
       >
         {choices.map((choice, i) => {
           return (

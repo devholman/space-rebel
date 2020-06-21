@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
       <Nav siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
       <Particles
-        className="h-screen bg-black"
+        className="h-screen fixed -z-10 inset-0 bg-black"
         params={{
           particles: {
             number: {

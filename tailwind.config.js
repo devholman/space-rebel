@@ -43,18 +43,20 @@ module.exports = {
         '13': '3.375rem',
         slight: '1.125rem',
       },
+      borderColor: [
+        'responsive',
+        'hover',
+        'focus',
+        'active',
+        'focus-within',
+        'group-focus',
+      ],
+      outline: ['focus', 'responsive', 'hover', 'focus-within'],
+      zIndex: {
+        '-10': '-10',
+      },
     },
   },
-  variants: {
-    borderColor: [
-      'responsive',
-      'hover',
-      'focus',
-      'active',
-      'focus-within',
-      'group-focus',
-    ],
-    outline: ['focus', 'responsive', 'hover', 'focus-within'],
-  },
+  variants: {},
   plugins: [],
 };

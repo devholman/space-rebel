@@ -3,14 +3,14 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import PrimaryCTA from '../components/buttons/PrimaryCTA';
 import SpaceRebelLogo from '../assets/spaceRebelLogo';
-// import Burger from './Burger';
+import Burger from './Burger';
 const Nav = ({ siteTitle }) => {
   const navLinks = ['services', 'our work', 'Packages', 'About Us'];
   const [showMenu, setShowMenu] = useState(false);
 
   return (
     <>
-      <nav className="flex flex-wrap bg-black p-2 lg:p-6 items-end justify-between w-full z-50 relative">
+      <nav className="flex flex-wrap bg-black p-2 lg:p-6 items-end justify-between w-full z-50 fixed md:relative">
         <div className="flex items-center flex-shrink-0 text-sr-blue-1 mr-6">
           <span className="mr-4 lg:mr-6">
             <SpaceRebelLogo width={'41'} />
@@ -19,13 +19,14 @@ const Nav = ({ siteTitle }) => {
             {siteTitle}
           </Link>
         </div>
-        <div className="block md:hidden">
-          <button
+
+        <div className="md:hidden">
+          <Burger navLinks={navLinks} />
+
+          {/* <button
             className="flex items-center px-3 py-2 border rounded text-white border-white-400 hover:text-white hover:border-white"
             onClick={() => setShowMenu(!showMenu)}
-          >
-            {/* <Burger /> */}
-          </button>
+          ></button> */}
         </div>
         <div
           className={`${
