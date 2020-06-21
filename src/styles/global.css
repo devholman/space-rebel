@@ -86,3 +86,13 @@ main {
   box-shadow: 4px 4px 4px #ff4500;
   font-family: 'Poppins';
 }
+
+.bm-menu-wrap {
+  top: 0px;
+}
+.menu-item {
+  padding: 20px 20px 0;
+}
+.bm-cross {
+  height: 24px !important;
+}
