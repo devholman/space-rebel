@@ -62,7 +62,7 @@
 .bm-menu-wrap {
   position: fixed;
   right: 0px;
-  top: 0px;
+  top: 0px !important;
   z-index: 1100;
   width: 300px;
   height: 100%;

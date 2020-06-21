@@ -88,7 +88,13 @@ main {
 }
 
 .bm-menu-wrap {
-  top: 0px;
+  position: fixed;
+  right: 0px;
+  top: 0px !important;
+  z-index: 1100;
+  width: 300px;
+  height: 100%;
+  transition: all 0.5s ease 0s;
 }
 .menu-item {
   padding: 20px 20px 0;

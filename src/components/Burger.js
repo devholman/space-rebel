@@ -27,6 +27,7 @@ const Burger = ({ navLinks }) => {
       onStateChange={(state) => {
         handleStateChange(state);
       }}
+      className={'top-0'}
     >
       {navLinks.map((linkText, i) => {
         return (
