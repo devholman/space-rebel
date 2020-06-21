@@ -17,8 +17,11 @@
     "smooth-scroll": "^16.1.3"
   },
   "scripts": {
+    "build": "gatsby build",
+    "clean": "gatsby clean",
     "develop": "gatsby develop",
-    "build": "gatsby build"
+    "serve": "gatsby serve",
+    "prod": "clean && build && serve"
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^4.0.4",
