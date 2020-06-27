@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { graphql } from 'gatsby';
+// import { graphql } from 'gatsby';
 // import Img from "gatsby-image"
 import stock1 from '../assets/co-working.jpeg';
 import stock2 from '../assets/laptop.jpeg';

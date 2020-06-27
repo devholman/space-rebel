@@ -28,7 +28,7 @@
     "clean": "gatsby clean",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "prod": "npm-run-all clean build serve"
+    "prod": "run-s clean build serve"
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^4.0.4",
