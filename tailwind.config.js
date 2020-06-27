@@ -1,5 +1,5 @@
 module.exports = {
-  purge: [],
+  purge: [false],
   theme: {
     extend: {
       colors: {
@@ -17,6 +17,7 @@ module.exports = {
         '30': '7.5rem', //XL
         '72': '18rem',
         '100': '25rem',
+        '200': '42rem',
       },
 
       fontSize: {
@@ -43,6 +44,9 @@ module.exports = {
         '13': '3.375rem',
         slight: '1.125rem',
       },
+      maxWidth: {
+        '32': '8rem',
+      },
       borderColor: [
         'responsive',
         'hover',
@@ -54,6 +58,9 @@ module.exports = {
       outline: ['focus', 'responsive', 'hover', 'focus-within'],
       zIndex: {
         '-10': '-10',
+      },
+      height: {
+        '100': '25rem',
       },
     },
   },

@@ -1,10 +1,25 @@
 import React from 'react';
 import { Link } from 'gatsby';
-
+import { graphql } from 'gatsby';
+// import Img from "gatsby-image"
 import stock1 from '../assets/co-working.jpeg';
 import stock2 from '../assets/laptop.jpeg';
 import stock3 from '../assets/notebook.jpeg';
 import SubTitle from './SubTitle';
+
+// export const query = graphql`
+//   query {
+//     file(relativePath: { eq: "blog/avatars/kyle-mathews.jpeg" }) {
+//       childImageSharp {
+//         # Specify the image processing specifications right in the query.
+//         # Makes it trivial to update as your page's design changes.
+//         fixed(width: 125, height: 125) {
+//           ...GatsbyImageSharpFixed
+//         }
+//       }
+//     }
+//   }
+// `
 
 const Projects = () => {
   return (
@@ -15,9 +30,10 @@ const Projects = () => {
         </SubTitle>
       </div>
       <section>
-        <div className="flex w-full h-auto justify-auto">
+        <div className="flex w-full h-auto justify-auto mb-8">
           <div className="w-1/3 relative">
             <Link to="/">
+              {/* <Img fixed={data.file.childImageSharp.fixed} /> */}
               <img
                 src={stock1}
                 alt="stock1"

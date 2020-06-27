@@ -7,6 +7,7 @@ import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import WhyUs from '../components/WhyUs';
 import Packages from '../components/Packages';
+import Footer from '../components/Footer';
 import useWindowDimensions from '../utils/windowDimensions';
 
 const HomePage = () => {
@@ -25,6 +26,7 @@ const HomePage = () => {
             <Projects />
             <Packages />
             <Contact />
+            <Footer />
           </div>
         )}
       </>

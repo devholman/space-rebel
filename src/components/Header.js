@@ -6,7 +6,7 @@ const Header = () => {
   //   const navLinks = ['services', 'our work', 'Packages', 'About Us'];
 
   return (
-    <header className="w-full text-white content-center">
+    <header id="top" className="w-full text-white content-center">
       <div className="header-center flex flex-col absolute items-center text-center mt-30 mb-12">
         <h1 className="heading flex justify-center text-4xl font-black">
           We're Space Rebel

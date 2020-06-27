@@ -3,6 +3,7 @@ module.exports = {
     title: `Space Rebel`,
     description: `A space rebel dev shop`,
     author: `A rebel`,
+    siteUrl: `https://www.thespacerebel.com`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -12,6 +13,24 @@ module.exports = {
         google: {
           families: ['Racing Sans One', 'Earth Orbiter', 'Poppins'],
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: `${__dirname}/src/assets/`,
+      },
+    },
+    `gatsby-plugin-sitemap`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.thespacerebel.com',
+        sitemap: 'https://www.thespacerebel.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     {
