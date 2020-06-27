@@ -8,7 +8,6 @@ const Burger = ({ navLinks }) => {
   const [closeMenu, setCloseMenu] = useState(false);
 
   const handleStateChange = (state) => {
-    console.log('state', state);
     setCloseMenu(state.isOpen);
   };
 
