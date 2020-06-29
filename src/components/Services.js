@@ -20,11 +20,11 @@ const Services = () => {
       description:
         'We build custom email templates for your marketing campaigns. Stay on brand even in your email.',
     },
-    {
-      title: 'Branding consulation',
-      description:
-        'If you want expert advice on how to properly pair colors, typography, and logos for your business, we can help! We will help you build a brand kit that is sure to attract customers.',
-    },
+    // {
+    //   title: 'Branding consulation',
+    //   description:
+    //     'If you want expert advice on how to properly pair colors, typography, and logos for your business, we can help! We will help you build a brand kit that is sure to attract customers.',
+    // },
     {
       title: 'Maintanence packages',
       description:
@@ -44,11 +44,13 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="bg-black w-screen h-200 md:h-100">
+    <section id="services" className="bg-black w-screen h-200 md:h-132">
       <div className="pb-16 pt-12">
-        <div className="lg:flex align-baseline">
+        <div className="lg:flex align-baseline items-center">
           <SubTitle
-            classes={'my-0 md:ml-6 md:mr-24 text-white border-white inline'}
+            classes={
+              'my-0 md:ml-6 md:mr-24 lg:mr-2 text-white border-white inline'
+            }
           >
             Services
           </SubTitle>
@@ -61,7 +63,7 @@ const Services = () => {
                   key={i + 1}
                   value={`${choice.title}`}
                   className={classnames(
-                    'lg:text-white lg:block lg:mx-12 lg:border-b-2 lg:border-gray-400 lg:focus:outline-none transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110 lg:focus:border-sr-blue-1',
+                    'lg:text-white lg:block pb-2 justify-around lg:mx-8 lg:border-b-2 lg:border-gray-400 lg:focus:outline-none transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-110 lg:focus:border-sr-blue-1',
                     { 'lg:border-sr-blue-1': choice === nchoice[0] }
                   )}
                   onClick={(e) => filterChoice(e, 'value')}
