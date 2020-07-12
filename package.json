@@ -30,7 +30,7 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "preload-fonts": "gatsby-preload-fonts",
-    "prod": "run-s clean preload-fonts build serve"
+    "prod": "run-s clean build serve preload-fonts"
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^4.0.4",

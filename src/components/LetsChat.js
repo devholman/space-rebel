@@ -10,12 +10,12 @@ const LetsChat = () => {
         We love working with anyone willing to defy the odds. Drop us a line if
         you'd like us to help you build something great.
       </p>
-      <button className="text-black font-medium bg-sr-blue-1 py-6 transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-        <Link to="/contact">
+      <Link to="/contact">
+        <button className="text-black font-medium bg-sr-blue-1 py-6 w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
           Let's Chat
           <IconArrow className="text-black inline mx-4 transform -rotate-90" />
-        </Link>
-      </button>
+        </button>
+      </Link>
     </div>
   );
 };
