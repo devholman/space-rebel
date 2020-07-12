@@ -22,6 +22,7 @@ module.exports = {
         path: `${__dirname}/src/assets/`,
       },
     },
+    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

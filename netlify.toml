@@ -1,7 +1,11 @@
 [build]
     functions = "functions" # netlify dev uses this directory to scaffold and serve your functions
+    publish = "public"
 
 [[redirects]]
     from = "/api/*"
     to = "/.netlify/functions/:splat"
     status = 200
+
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"

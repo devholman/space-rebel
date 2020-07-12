@@ -5,7 +5,7 @@ import SpaceRebelLogo from '../assets/spaceRebelLogo';
 import Burger from './Burger';
 import PrimaryCTA from '../components/buttons/PrimaryCTA';
 const Nav = ({ siteTitle }) => {
-  const navLinks = ['services', 'our work', 'Packages', 'About Us'];
+  const navLinks = ['Services', 'Our Work', 'Packages', 'About Us'];
 
   return (
     <nav className="flex flex-wrap bg-black p-2 lg:p-6 items-end justify-between w-full z-50 fixed md:relative">

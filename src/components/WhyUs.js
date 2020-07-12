@@ -5,7 +5,7 @@ const WhyUs = () => {
   return (
     <div
       id="why-us"
-      className="bg-white flex flex-col justify-center items-left pb-16 pt-6"
+      className="bg-white flex flex-col justify-center items-left pb-16 pt-6 mb-8"
     >
       <SubTitle classes={'m-6 text-black border-sr-blue-1'}>Why us?</SubTitle>
       {/* <h2 className="text-2xl border-l-4 m-6 text-black border-sr-blue-1 pl-2 font-semibold leading-normal">
