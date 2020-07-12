@@ -74,7 +74,7 @@ const Services = () => {
             })}
           </div>
         </div>
-        <p className="text-left mt-12 p-8 lg:px-16 lg:p-16 lg:mx-40">
+        <p className="text-left lg:mt-12 p-8 lg:px-16 lg:p-16 lg:mx-40">
           {nchoice[0].description}
         </p>
       </div>

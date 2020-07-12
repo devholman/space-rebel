@@ -9,35 +9,35 @@
   font-style: normal;
   font-weight: 400;
   src: url('../assets/fonts/earthorbiter.ttf') format('truetype'); /* IE9 Compat Modes */
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Racing Sans One';
   font-style: normal;
   font-weight: 400;
   src: url('../assets/fonts/RacingSansOne-Regular.ttf') format('truetype'); /* IE9 Compat Modes */
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
   font-style: medium;
   font-weight: 500;
   src: url('../assets/fonts/Poppins-Medium.ttf') format('truetype'); /* IE9 Compat Modes */
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
   font-style: black;
   font-weight: 900;
   src: url('../assets/fonts/Poppins-Black.ttf') format('truetype'); /* IE9 Compat Modes */
-  font-display: fallback;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Poppins';
   font-style: black;
   font-weight: 400;
   src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype'); /* IE9 Compat Modes */
-  font-display: fallback;
+  font-display: swap;
 }
 
 * {
