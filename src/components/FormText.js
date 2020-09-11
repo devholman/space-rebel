@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useReducer } from 'react';
 import { navigate } from 'gatsby-link';
 
 function encode(data) {
@@ -7,8 +7,21 @@ function encode(data) {
     .join('&');
 }
 
+const reducer = (state, action) => {
+    switch (action.type) {
+      case 'updatedFieldValue':
+        return { ...state, [action.field]: action.value };
+      case 'updateStatus':
+        return { ...state, status: action.status };
+      case 'reset':
+      default:
+        return INITIAL_STATE;
+    }
+  };
+  
 export default function Contact() {
   const [state, setState] = React.useState({});
+  const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
 
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
@@ -28,7 +41,13 @@ export default function Contact() {
       .then(() => navigate(form.getAttribute('action')))
       .catch((error) => alert(error));
   };
-
+  if (state.status === 'SUCCESS') {
+    return (
+      <p >
+        Message Received
+      </p>
+    );
+  }
   return (
     <div className="flex flex-col p-8 my-20">
       <h1 className="text-white text-lg mb-8">
