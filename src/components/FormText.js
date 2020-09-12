@@ -1,5 +1,13 @@
 import React from 'react';
 import { navigate } from 'gatsby-link';
+import { Link } from 'gatsby';
+
+const INITIAL_STATE = {
+  name: '',
+  email: '',
+  message: '',
+  status: 'IDLE',
+};
 
 function encode(data) {
   return Object.keys(data)
@@ -7,13 +15,29 @@ function encode(data) {
     .join('&');
 }
 
+const reducer = (redState, action) => {
+    switch (action.type) {
+      case 'updatedFieldValue':
+        return { ...redState, [action.field]: action.value };
+      case 'updateStatus':
+        return { ...redState, status: action.status };
+      case 'reset':
+      default:
+        return INITIAL_STATE;
+    }
+  };
+
 export default function Contact() {
   const [state, setState] = React.useState({});
+  const [redState, dispatch] = React.useReducer(reducer, INITIAL_STATE);
 
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
+const setStatus = (status) => {
+    dispatch({ type: 'updateStatus', status })
+}
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -25,10 +49,31 @@ export default function Contact() {
         ...state,
       }),
     })
-      .then(() => navigate(form.getAttribute('action')))
+    //   .then(() => navigate(form.getAttribute('action')))
+      .then(response => {
+          setStatus('SUCCESS')
+      })
       .catch((error) => alert(error));
   };
-
+  if (redState.status === 'SUCCESS') {
+    return (
+        <div className="flex flex-col">
+            <p className="text-white font-bold text-secondary mt-32 mb-0 mx-auto">
+                Message Received
+            </p>
+            <br></br>
+            <p className=" mt-2 m-auto">
+                <Link
+                to={`/`}
+                className='text-sr-blue-1 hover:underline'
+            >
+                Retrun to homepage
+            </Link>
+            </p>
+            
+      </div>
+    );
+  }
   return (
     <div className="flex flex-col p-8 my-20">
       <h1 className="text-white text-lg mb-8">
