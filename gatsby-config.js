@@ -1,12 +1,14 @@
 module.exports = {
   siteMetadata: {
     title: `Space Rebel`,
-    description: `A space rebel dev shop`,
+    titleTemplate: "%s · Design & Development Services · Business Websites · Email · Maintenance · Analytics | Austin, TX",
+    description: `The website design and development agency helping your business navigate the digital universe. We design and build custom websites that are fast, mobile friendly, accessible, and optimized to perform.`,
     author: `A rebel`,
-    siteUrl: `https://www.thespacerebel.com`,
+    siteUrl: `https://www.thespacerebel.com`, // No trailing slash allowed!
   },
   plugins: [
     `gatsby-plugin-postcss`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
