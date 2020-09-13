@@ -7,7 +7,10 @@ const SpaceRebelLogo = ({ height = '71', width = '71' }) => (
     viewBox="0 0 71 71"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    role="img"
+    aria-labelledby="srLogoTitleID"
   >
+    <title id="srLogoTitleID">Space rebel helmet</title>
     <path
       d="M65.0936 30.3894C65.0936 45.6693 51.9942 58.2788 35.5532 58.2788C19.1121 58.2788 6.0127 45.6693 6.0127 30.3894C6.0127 15.1095 19.1121 2.5 35.5532 2.5C51.9942 2.5 65.0936 15.1095 65.0936 30.3894Z"
       stroke="white"
