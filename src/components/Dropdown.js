@@ -5,6 +5,7 @@ const Dropdown = ({ choices, filterChoice }) => {
     <div className=" mb-8 md:mb-16 lg:hidden mt-6 inline-block relative max-w-32">
       <select
         name="services"
+        id="service-select"
         className="appearance-none bg-black text-center block pr-4 py-2 pr-4 bg-transparent leading-tight w-full focus:outline-none border-b-2 border-white max-w-32"
         onChange={(e) => filterChoice(e)}
       >

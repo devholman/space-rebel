@@ -52,7 +52,7 @@ const Services = () => {
               'my-0 md:ml-6 md:mr-24 lg:mr-2 text-white border-white inline'
             }
           >
-            Services
+           <label for="service-select"> Services </label>
           </SubTitle>
           <Dropdown choices={choices} filterChoice={filterChoice} />
 

@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import Particles from 'react-particles-js';
 import Nav from './Nav';
+import SEO from './seo'
 if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require
   require('smooth-scroll')('a[href*="#"]');
@@ -27,6 +28,9 @@ const ParticleLayout = ({ children }) => {
   `);
   return (
     <>
+    <SEO
+      
+    />
       <Nav siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
       <Particles
