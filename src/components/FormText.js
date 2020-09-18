@@ -67,7 +67,7 @@ const setStatus = (status) => {
                 to={`/`}
                 className='text-sr-blue-1 hover:underline'
             >
-                Retrun to homepage
+                Return to homepage
             </Link>
             </p>
             
@@ -144,7 +144,7 @@ const setStatus = (status) => {
         </p>
         <p className="my-6">
           <button
-            className="flex-shrink-0 bg-sr-blue-1 hover:bg-sr-blue-1 border-sr-blue-1 text-sm border-4 text-white py-1 px-2 rounded"
+            className="flex-shrink-0 bg-sr-blue-1 hover:bg-sr-blue-1 border-sr-blue-1 text-sm border-4 text-white py-1 px-2 rounded transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
             type="submit"
           >
             Send
