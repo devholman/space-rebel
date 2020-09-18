@@ -12,7 +12,7 @@ const LetsChat = () => {
       </p>
       <Link to="/contact">
         <button className="text-black font-medium bg-sr-blue-1 py-6 w-full transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110">
-          Let's Chat
+          Get in touch
           <IconArrow className="text-black inline mx-4 transform -rotate-90" />
         </button>
       </Link>

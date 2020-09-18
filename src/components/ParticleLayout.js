@@ -74,11 +74,28 @@ const ParticleLayout = ({ children }) => {
             },
           },
           interactivity: {
-            modes: {
-              grab: {
-                distance: 400,
-              },
+            detectsOn: "canvas",
+            events: {
+              onclick: { enable: true, mode: "repulse" },
+              onHover: {
+                enable:true,
+                mode:"repulse",
+                parallax: { enable: false, force: 2, smooth: 10 }
             },
+          },
+              modes: {
+      bubble: { distance: 200, duration: 2, opacity: 0, size: 0, speed: 3 },
+      grab: { distance: 200, line_linked: { opacity: 1 } },
+      push: { particles_nb: 4 },
+      remove: { particles_nb: 2 },
+      repulse: { distance: 100, duration: 0.4 }
+    }
+            // modes: {
+            //   repulse: {
+            //     distance: 100,
+            //     duration: 0.8,
+            //   },
+            // },
           },
           retina_detect: true,
         }}
